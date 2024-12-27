@@ -1,0 +1,33 @@
+pipeline {
+	agent any
+
+stages {
+	stage ('Parallel Stage'){
+		parallel {
+			stage	('Stage-1')
+			{
+				steps{
+				echo "Welcome to Github!"
+				sleep 5
+				}
+			}	
+			stage	('Stage-2')
+			{
+				steps{
+				echo "Good Morning!!"
+				sleep 5
+				}
+			}
+			stage	('Stage-3')
+			{
+				steps{
+				echo "Keep Happy!!"
+				sleep 5
+				}
+			}	
+	
+
+		}
+	}
+  }
+}
